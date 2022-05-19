@@ -1,0 +1,63 @@
+问题：3-1：numeric、integer、complex
+3-2：nlevels
+3-3：用as.numeric ("6.283185")
+3-4：summary、head、str、unclass、attributes、View
+3-5：用rm(list = ls())
+练习：
+class(c(Inf))
+class(c(NA))
+class(c(NaN))
+class(c(""))#查找数据类型
+
+
+mode(c(Inf))
+mode(c(NA))
+mode(c(NaN))
+mode(c(""))#查找数据模式
+
+
+storage.mode(c(Inf))
+storage.mode(c(NA))
+storage.mode(c(NaN))
+storage.mode(c(""))#查找数据储存模式
+
+
+pets<-sample(c("dog","cat","dolphin","hamster","goldfish"),100,replace = TRUE)#用sample从中随机生成100个宠物名
+head(pets)
+summary(pets)#用summary计算数量
+
+
+apple<-1
+banana<-2
+cherry<-3
+carambola<-4#创建以水果命名的数值
+ls(pattern="a")#用ls列出含有a的
+
+问题：4-1：用seq.int(0,1,0.25)
+4-2：在创建矢量之后使用names函数
+4-3：正整数的位置检索，负整数的位置检索，逻辑值或元素的名称
+4-4：60
+4-5：*
+练习：
+n<-seq_len(50)#创建序列
+triangular<-n*(n+1)/2#列出计算公式
+names(triangular)<-letters[1:15]#用names，使用前15个英文字母来给向量命名
+triangular[c("a","e","i","o")]#选择用元音命名的
+
+
+diag(abs(seq.int(-10,10)))#用diag，使用序列10到0到11创建一个21×21的矩阵
+
+x <- 0:99#创建向量列表
+sqrt_x <- sqrt(x)#用sqrt计算平方
+is_square_number <- sqrt_x == floor(sqrt_x)
+square_numbers <- x[is_square_number]
+groups <- cut(square_numbers,seq.int(min(x), max(x), 10),include.lowest = TRUE,right = FALSE)#选取包含的平方数
+split(square_numbers, groups)
+
+iris_numeric <- iris[, 1:4]#创建数据框，由iris数据集的数值列组成
+colMeans(iris_numeric)#计算各列平均值
+
+beaver1$id <- 1
+beaver2$id <- 2#添加id列，赋值
+both_beavers <- rbind(beaver1, beaver2)#拼接数据框
+subset(both_beavers, as.logical(activ))#找出活跃子集
