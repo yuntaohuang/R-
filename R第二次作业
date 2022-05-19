@@ -38,6 +38,18 @@ ls(pattern="a")#用ls列出含有a的
 4-3：正整数的位置检索，负整数的位置检索，逻辑值或元素的名称
 4-4：60
 4-5：*
+问题4
+a<-for(i in seq(11,50,by=3))
+b<-c(2,3)
+c<-a-b
+
+a<-for(i in seq(1.1,4,by=20))
+b<-c(4,5,8,9)
+c<-a*b
+
+加减乘除
+
+
 练习：
 n<-seq_len(50)#创建序列
 triangular<-n*(n+1)/2#列出计算公式
@@ -47,6 +59,15 @@ triangular[c("a","e","i","o")]#选择用元音命名的
 
 diag(abs(seq.int(-10,10)))#用diag，使用序列10到0到11创建一个21×21的矩阵
 
+
+问题5：5-1：3
+5-2：formals或.Options
+5-3：可以在单方括号中结合矩阵式索引字符来使用。也可以在单或双括号中结合列表样式索引中和单个索引值使用或者是使用美元符号运算符，还可以使用subset函数
+5-4：把check.names=FALSE传给data.frame
+5-5：可以使用rbind添加到垂直方向上，使用cbind添加到水平方向。
+
+
+练习：
 x <- 0:99#创建向量列表
 sqrt_x <- sqrt(x)#用sqrt计算平方
 is_square_number <- sqrt_x == floor(sqrt_x)
